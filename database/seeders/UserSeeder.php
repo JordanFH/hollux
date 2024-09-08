@@ -40,7 +40,7 @@ class UserSeeder extends Seeder
                 'password' => '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', // password
                 'phone_number' => $faker->phoneNumber(), // password
                 'remember_token' => Str::random(10),
-                'avatar' => 'img/avatar/' . substr($faker->name(), 0, 1)  . '.png'
+                'avatar' => 'img/avatar/' . strtolower(substr($faker->name(), 0, 1)) . '.png'
             ]);
 
             $user->syncRoles('user');
